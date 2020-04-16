@@ -22,7 +22,7 @@ a{
 
 body{
     background: #171932;
-	font-family:Ariel;
+	font-family:Arial;
 }
 
 
@@ -77,6 +77,7 @@ main,header{
 
 .AdventureIcons{
 	display:block;
+
 	border-radius: 0px 0px 5px 5px; 
 	height:60px;
 	width:270px;
@@ -95,7 +96,9 @@ main,header{
 	font-size: 16px;
 	margin-right:15px;
 }
-
+.AdventureIcons img{
+	opacity: 0.4;
+}
 .AdventureIcons img:nth-child(2),.AdventureIcons img:nth-child(3){
 	margin-right:10px;
 }
@@ -195,12 +198,14 @@ footer
 
 .FooterIcons
 {
+	
 	padding-top:18px;
 	padding-left:22px;
 }
 
 .FooterIcons img
 {
+	opacity:0.4;
 	padding-right:10px;
 }
 
