@@ -196,6 +196,7 @@ footer{
 	padding-left:22px;
 }
 .FooterIcons p{
+	opacity: 0.4;
 	display:inline-block;
 	padding-right:10px;
 }
