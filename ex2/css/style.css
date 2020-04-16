@@ -1,0 +1,209 @@
+/*-----------------------------*/
+/*inits*/
+/*-----------------------------*/
+*{
+    margin: 0px;
+    padding: 0px;
+	color: #FFFFFF;	
+	
+}
+
+header, main, footer, nav, section, div,.TravelOption li span,#logo{
+    display : block;
+}
+
+header,footer{
+    width: 100%;
+}
+
+a{
+	text-decoration: none;
+}
+
+body{
+    background: #171932;
+	font-family:Ariel;
+}
+
+
+
+/*-----------------------------*/
+/* Header area */
+/*-----------------------------*/
+
+header{
+    margin-bottom:36px;
+}
+
+.TravelOption li, #logo{
+	height: 48px;
+	background:  url(../images/logo.png) left no-repeat;	
+	padding-left:64px;
+
+}
+
+#logo span{
+	font-size: 40px;
+}
+
+
+
+
+/*-----------------------------*/
+/* main  */
+/*-----------------------------*/
+
+.Wrapper{
+	margin-top:16px;
+}
+
+main,header{
+	margin-left:16px;	
+}
+
+.AdventureOption article{
+	box-shadow: 0px 2px 7px rgba(255, 255, 255, 0.3);
+	border-radius: 5px;
+	display:inline-block;
+	margin-right:16px;
+	margin-bottom:70px;
+	
+}
+
+.AdventureImg{
+	border-radius: 5px 5px 0px 0px; 
+	display:block;
+}
+
+.AdventureIcons{
+	display:block;
+	border-radius: 0px 0px 5px 5px; 
+	height:60px;
+	width:270px;
+	background: #9B51E0;
+	box-shadow: 0px 2px 7px rgba(255, 255, 255, 0.3);
+}
+
+.AdventureIcons a,.AdventureIcons img{
+	margin-top:18px;
+}
+
+.AdventureIcons a{
+	
+	margin-left:10px;
+	display:inline-block;
+	font-size: 16px;
+	margin-right:15px;
+}
+
+.AdventureIcons img:nth-child(2),.AdventureIcons img:nth-child(3){
+	margin-right:10px;
+}
+
+.AdventureIcons img:nth-child(4){
+	margin-right:20px;
+}
+.TravelImg {
+	margin-bottom:30px;
+}
+
+.TravelImg img{
+	margin-right:20px;
+}
+
+.TravelImg img:not(.Selcted ){
+	padding-bottom:40px;
+}
+
+
+.TravelOption{
+	margin-bottom:45px;
+}
+
+.TravelOption li{
+	list-style-type:none;
+	padding-top:8px;
+}
+
+/*Put text in the midale*/
+.TravelOption li span{	
+	margin-top:10px;
+}
+
+.SelectSection {
+	font-size: 28px;
+	margin-bottom:54px;
+}
+
+.SelectSection a:hover,.AdventureIcons a:hover
+{
+    color: #1434E1;
+    opacity: 1;
+}
+
+
+
+/*-----------------------------*/
+/* main */
+/*-----------------------------*/
+.Big-h1
+{
+	font-size: 38px;
+}
+
+.Big-h1 span
+{
+	font-size: 22px;
+}
+
+h1,.Big-h1 span
+{
+	margin-bottom:16px;
+}
+
+.TextStyle section p
+{
+	width: 367px;
+	font-size: 14px;
+}
+
+#section1 p
+{
+	margin-bottom:20px;
+}
+
+#section2, #section3 ,#section4 
+{
+	margin-bottom:70px;
+}
+
+#section5 p
+{
+	margin-bottom:50px;
+}
+
+
+/*-----------------------------*/
+/* Footer area */
+/*-----------------------------*/
+
+footer
+{
+	height: 48px;
+	background: #9B51E0;
+}
+
+.FooterIcons
+{
+	padding-top:18px;
+	padding-left:22px;
+}
+
+.FooterIcons img
+{
+	padding-right:10px;
+}
+
+	
+
+
