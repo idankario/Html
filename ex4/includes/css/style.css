@@ -1,0 +1,730 @@
+/*-----------------------------*/
+/*inits*/
+/*-----------------------------*/
+*{
+    margin: 0px;
+    padding: 0px;	
+	color: #696969;
+}
+canvas{position:absolute; z-index:0;
+top:0px; left:0px;width: 100%; height=100%;}
+main,footer, nav, section,aside, div,#logo{
+    display : block;
+}
+
+body {
+  width: 100%;
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+	background:#000000;
+ 
+}
+from
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+main
+{	
+	position:absolute;
+	z-index:3;
+	margin-top:15px;
+}
+.left
+{
+	
+	margin-left:700px;
+
+}
+
+.container1  {
+	z-index:2;
+	position:absolute;
+	top:400px;
+	right:400px;
+}
+
+
+.container-ring {
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: calc(50% - 45vh);
+  left: calc(50% - 40vw);
+  transition: all 5s ease;
+  transform: rotateX(0deg);
+  will-change: transform;
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+.container-ring .ringMain {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.container-ring .ringMain circle {
+  fill: none;
+  stroke-linecap: round;
+  transform-origin: 50% 50%;
+  will-change: transform;
+  stroke: #33ABB9;
+}
+.container-ring .ringMain .c1 {
+  stroke-width: 0.1;
+}
+.container-ring .ringMain .c2 {
+  stroke-width: 0.1;
+  stroke-dasharray: 5, 10;
+  animation: rotate-c2 10s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.container-ring .ringMain [class^=c3] {
+  stroke-width: 1;
+  transform: rotate(-90deg);
+  animation: progress 10s ease-out forwards;
+}
+.container-ring .ringMain .c3-1-red {
+  stroke: #BA2433;
+  stroke-dasharray: 38, 100;
+}
+.container-ring .ringMain .c3-2 {
+  stroke-dasharray: 46, 100;
+}
+.container-ring .ringMain .c3-3 {
+  stroke-dasharray: 54, 100;
+}
+.container-ring .ringMain .c4 {
+  stroke-width: 0.5;
+  animation: rotate-c4 10s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.container-ring .ringMain .c5 {
+  stroke-width: 0.7;
+  stroke-dasharray: 40;
+  animation: rotate-c5 10s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.container-ring .ringMain .c6 {
+  stroke-width: 0.7;
+  stroke-dasharray: 10;
+  animation: rotate-c6 10s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.container-ring .ringMain .c7 {
+  stroke-width: 0.7;
+  stroke-dasharray: 0.3;
+  animation: rotate-c7 10s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.container-ring .ringMain .c8 {
+  stroke-width: 2;
+  stroke-dasharray: 30,100;
+  animation: rotate-c8 10s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.container-ring .ringMain .c9 {
+  stroke-width: 0.4;
+  stroke-dasharray: 20;
+  animation: rotate-c9 10s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.container-ring .ringMain .c10 {
+  stroke-width: 0.4;
+  stroke-dasharray: 80, 100;
+  animation: rotate-c10 10s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.container-ring .ringMain .c11 {
+  stroke-width: 1;
+  stroke-dasharray: 80, 100;
+  animation: rotate-c11 10s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.container-ring .cpu {
+  position: absolute;
+  color: #33ABB9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-out;
+}
+.container-ring .cpu p {
+  font-size: 0.8vw;
+  margin: 0;
+}
+.container-ring .rotate-skew {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  will-change: transform;
+  z-index: -1;
+  transition: transform 1s ease-out;
+}
+.container-ring .rotate-skew .skew-square {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  will-change: transform;
+  animation: speed 2s infinite linear;
+}
+.container-ring .rotate-skew .skew-square [class^="square"] {
+  position: absolute;
+  background: #33ABB9;
+  transform-origin: 50% 50%;
+  width: 25px;
+  height: 15px;
+  box-shadow: 1px 1px 10px #33ABB9;
+  transition: all 1s ease-in;
+  will-change: transform;
+}
+.container-ring .rotate-skew .skew-square .square-1 {
+  transform: rotate(0deg) translateY(-90px) skewX(-50deg);
+}
+.container-ring .rotate-skew .skew-square .square-2 {
+  transform: rotate(20deg) translateY(-90px) skewX(-50deg);
+}
+.container-ring .rotate-skew .skew-square .square-3 {
+  transform: rotate(40deg) translateY(-90px) skewX(-50deg);
+}
+.container-ring .rotate-skew .skew-square .square-4 {
+  transform: rotate(60deg) translateY(-90px) skewX(-50deg);
+}
+.container-ring .rotate-skew .skew-square .square-5 {
+  transform: rotate(80deg) translateY(-90px) skewX(-50deg);
+}
+.container-ring .rotate-skew .skew-square .square-6 {
+  transform: rotate(100deg) translateY(-90px) skewX(-50deg);
+}
+.container-ring .rotate-skew .skew-square .square-7 {
+  transform: rotate(120deg) translateY(-90px) skewX(-50deg);
+}
+.container-ring .rotate-skew .skew-square .square-8 {
+  transform: rotate(140deg) translateY(-90px) skewX(-50deg);
+}
+.container-ring .rotate-skew .skew-square .square-9 {
+  transform: rotate(160deg) translateY(-90px) skewX(-50deg);
+}
+.container-ring .rotate-skew .skew-square .square-10 {
+  transform: rotate(180deg) translateY(-90px) skewX(-50deg);
+}
+.container-ring .rotate-skew .skew-square .square-11 {
+  transform: rotate(200deg) translateY(-90px) skewX(-50deg);
+}
+.container-ring .rotate-skew .skew-square .square-12 {
+  transform: rotate(220deg) translateY(-90px) skewX(-50deg);
+}
+.container-ring .rotate-skew .skew-square .square-13 {
+  transform: rotate(240deg) translateY(-90px) skewX(-50deg);
+}
+.container-ring .rotate-skew .skew-square .square-14 {
+  transform: rotate(260deg) translateY(-90px) skewX(-50deg);
+}
+.container-ring .rotate-skew .skew-square .square-15 {
+  transform: rotate(280deg) translateY(-90px) skewX(-50deg);
+}
+.container-ring .rotate-skew .skew-square .square-16 {
+  transform: rotate(300deg) translateY(-90px) skewX(-50deg);
+}
+.container-ring .rotate-skew .skew-square .square-17 {
+  transform: rotate(320deg) translateY(-90px) skewX(-50deg);
+}
+.container-ring .rotate-skew .skew-square .square-18 {
+  transform: rotate(340deg) translateY(-90px) skewX(-50deg);
+}
+.container-ring .rectangle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  will-change: transform;
+  transition: transform 1s ease-out;
+}
+.container-ring .rectangle [class^="rectangle"] {
+  position: absolute;
+  background: #184344;
+  border: 3px solid #33ABB9;
+  border-radius: 20%;
+  width: 45px;
+  height: 25px;
+}
+.container-ring .rectangle .rectangle-2 {
+  transform: rotate(15deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-3 {
+  transform: rotate(30deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-4 {
+  transform: rotate(45deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-5 {
+  transform: rotate(60deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-6 {
+  transform: rotate(75deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-7 {
+  transform: rotate(90deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-8 {
+  transform: rotate(105deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-9 {
+  transform: rotate(120deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-10 {
+  transform: rotate(135deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-11 {
+  transform: rotate(150deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-12 {
+  transform: rotate(165deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-13 {
+  transform: rotate(180deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-14 {
+  transform: rotate(195deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-15 {
+  transform: rotate(210deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-16 {
+  transform: rotate(225deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-17 {
+  transform: rotate(240deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-18 {
+  transform: rotate(255deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-19 {
+  transform: rotate(270deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-20 {
+  transform: rotate(285deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-21 {
+  transform: rotate(300deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-22 {
+  transform: rotate(315deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-23 {
+  transform: rotate(330deg) translateY(-140px);
+}
+.container-ring .rectangle .rectangle-24 {
+  transform: rotate(345deg) translateY(-140px);
+}
+.container-ring .symbol {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s ease-out;
+}
+.container-ring .symbol [class^="symbol"] {
+  position: absolute;
+  transform-origin: 50% 50%;
+  width: 30px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+.container-ring .symbol [class^="symbol"] p {
+  filter: drop-shadow(0.1px 0.1px 1px #ffffff);
+}
+.container-ring .symbol .symbol-1 {
+  transform: rotate(0deg) translateY(-200px);
+}
+.container-ring .symbol .symbol-2 {
+  transform: rotate(45deg) translateY(-200px) rotate(-45deg);
+}
+.container-ring .symbol .symbol-3 {
+  transform: rotate(315deg) translateY(-200px) rotate(-315deg);
+}
+.container-ring .symbol .symbol-4 {
+  transform: rotate(135deg) translateY(-200px) rotate(-135deg);
+}
+.container-ring .symbol .symbol-5 {
+  transform: rotate(180deg) translateY(-200px) rotate(-180deg);
+}
+.container-ring .symbol .symbol-6 {
+  transform: rotate(225deg) translateY(-200px) rotate(-225deg);
+}
+
+/********************
+/* CLASS ADD/REMOVE WITH JS
+*/
+.beginAnim {
+  animation: beginAnim 0.8s ease 0s 1;
+}
+
+.rotate-container-ring {
+  transform: rotateX(10deg) rotateY(40deg) translateY(40px) translateX(-120px);
+}
+
+.cpu-3d {
+  transform: translateZ(420px);
+}
+
+.skew-square-3d {
+  transform: translateZ(350px);
+}
+
+.rectangle-3d {
+  transform: translateZ(250px);
+}
+
+.symbol-3d {
+  transform: translateZ(150px);
+}
+
+.skew-square-boost {
+  animation: changeColor 5s linear 1 forwards;
+}
+
+.skew-square-scale {
+  transform: translateZ(50px) scale(5);
+}
+
+.animation-container-ring {
+  transform: perspective(200px) rotateX(70deg) rotate(360deg);
+}
+
+.remove-button {
+  display: none !important;
+}
+
+/*********************************************************
+* KEYFRAMES 
+**/
+@keyframes beginAnim {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes speed {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+@keyframes changeColor {
+  0% {
+    background: #33ABB9;
+    box-shadow: 1px 1px 10px #33ABB9;
+  }
+  25% {
+    border-radius: 50%;
+  }
+  50% {
+    background: #E8823A;
+    box-shadow: 1px 1px 10px #E8823A;
+  }
+  100% {
+    background: #BA2433;
+    box-shadow: 1px 1px 10px #BA2433;
+  }
+}
+@keyframes rotate-c2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(90deg);
+  }
+  30% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(3000deg);
+  }
+  80% {
+    transform: rotate(-40deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotate-c4 {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(20deg);
+  }
+  30% {
+    transform: rotate(50deg);
+  }
+  60% {
+    transform: rotate(90deg);
+  }
+  80% {
+    transform: rotate(-40deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotate-c5 {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-90deg);
+  }
+  30% {
+    transform: rotate(40deg);
+  }
+  50% {
+    transform: rotate(120deg);
+  }
+  60% {
+    transform: rotate(90deg);
+  }
+  90% {
+    transform: rotate(300deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotate-c6 {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(70deg);
+  }
+  30% {
+    transform: rotate(40deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  60% {
+    transform: rotate(100deg);
+  }
+  90% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotate-c7 {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(80deg);
+  }
+  30% {
+    transform: rotate(50deg);
+  }
+  60% {
+    transform: rotate(80deg);
+  }
+  80% {
+    transform: rotate(150deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotate-c8 {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(40deg);
+  }
+  30% {
+    transform: rotate(80deg);
+  }
+  60% {
+    transform: rotate(-60deg);
+  }
+  80% {
+    transform: rotate(100deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotate-c9 {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(20deg);
+  }
+  30% {
+    transform: rotate(40deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(120deg);
+  }
+  90% {
+    transform: rotate(70deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotate-c10 {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(70deg);
+  }
+  30% {
+    transform: rotate(-40deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  60% {
+    transform: rotate(100deg);
+  }
+  90% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotate-c11 {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(80deg);
+  }
+  30% {
+    transform: rotate(50deg);
+  }
+  60% {
+    transform: rotate(80deg);
+  }
+  80% {
+    transform: rotate(150deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#regForm {
+	
+  
+ border-radius:20px;
+ font-size:15px;
+ margin-top:30px;
+  width:400px;height:690px;
+ display: flex;
+  opacity:0.9;
+  justify-content: center;
+  background-color: #F0F8FF;
+ 
+}
+.tab
+{
+	margin:40px;
+	height:140px;
+	width:150px;
+	
+}
+
+h1 {
+  text-align: center;  
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4CAF50;
+}

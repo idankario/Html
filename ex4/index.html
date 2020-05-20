@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>idan kario-ex4</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="./includes/css/style.css">
+
+</head>
+<body>
+
+	<div class="container">
+
+		<main >
+		
+			<form  action="http://html5-book.co.il/teach/forms/get_form2.php" id="regForm" method="GET">
+				<div class="columns">
+					<div class="tab">
+						<div class="row" >
+							<label >Muzi galacti 
+								<input name="fullName" required pattern="[a-zA-Z]+[ ]+[a-zA-Z]+" placeholder="Nord galacti" title="Must give nord space & galacti" type="text" oninput="this.className = ''">
+							</label> <br>
+						</div>
+						<div class="row">
+							<label> Rengton
+								<input type="password" name="pass" required pattern="(^(?:([-]+[>])*([<][-]+)*)$)" class="form-control"  placeholder="Must contain one Rengton with lines ---> or <--"
+								title="Must contain one direction ---> or <--" oninput="this.className = ''">
+							</label> <br>
+						</div>
+						<div class="row">
+							<label>Nogil-zip
+								<input type="email" name="mail" class="form-control" id="exampleFormControlInput1"  autocomplete placeholder="Nogil zip" title="Give yor Nogil with zip '@'' zip  '.'"oninput="this.className = ''">
+							</label> <br>
+						</div>
+						<div class="row">
+							<label>Sisko deks
+								<input type="url"  class="form-control" name="website" placeholder="Sisko deks to zip you up" title="Sisko start 'http://www.' or 'https://www.' Sisko again"oninput="this.className = ''"
+						</div></div>
+						<div class="tab">
+							<div class="row">
+								<label>Give me your enginton
+									<input type="tel" name="phone" class="form-control" placeholder="Enginton for ton ton"pattern="[0-9].{8,9}"title="Must be 9-10 digits"oninput="this.className = ''">
+								</label> <br>
+							</div>
+							<div class="row">
+								<label>Your luck
+									<input type="number" class="form-control"  name="coffee" placeholder="Your luck "oninput="this.className = ''">
+								</label> <br>
+							</div>
+							<div class="row">
+								<label>Your baz
+									<input type="range"  class="form-control" min="0" max="50" name="temper"oninput="this.className = ''">
+								</label> <br>
+							</div></div>
+						<div class="tab">
+							<div class="row">
+								<label>Give us azim zomania 
+									<textarea rows="2" class="form-control"  cols="25" name="address" placeholder="Give us azim zomania" oninput="this.className = ''"></textarea>
+								</label> <br>
+							</div>
+							<div class="row">
+								<div required >
+									<span>  </span>
+									<br>
+									<label>Fricking
+										<input type="checkbox" name="interests[]" value="Reading "oninput="this.className = ''">
+									</label>
+										<br>
+									<label>Scrry
+										<input type="checkbox" name="interests[]" value="Learning"oninput="this.className = ''">
+									</label>
+									<br>
+									<label>Fishe
+										<input type="checkbox" name="interests[]" value="Singing"oninput="this.className = ''">
+									</label> <br>
+									<label>Namanm
+										<input type="checkbox" name="interests[]" value="Acting"oninput="this.className = ''">
+									</label>
+								</div>
+							</div></div>
+							<div class="tab">
+								<div class="row">
+									<label required >Are You rady to be amaze   <br>
+										<input type="radio" name="gender" value="male" checked oninput="this.className = ''"> Yes<br>
+										<input type="radio" name="gender" value="female" oninput="this.className = ''"> No<br>
+									</label> 
+								</div>
+								<div class="row">
+									<label required >
+										<select name="age" required>Your inch
+											<option disabled>Please select</option>
+											<option value="11" selected="selected" oninput="this.className = ''">JUST FUN (15-19 years)</option>
+											<option value="12" oninput="this.className = ''">NICY GUT (20-26 years)</option>
+											<option value="13" oninput="this.className = ''">SERIES (27-35 years)</option>
+											<option value="14" oninput="this.className = ''">FUN EXPRES (35+ years)</option>
+										</select>
+									</label>
+								</div> </div> 
+					<div style="overflow:auto;">
+						<div style="float:right;">
+							<button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+							<button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+						</div>
+					</div>
+					  <!-- Circles which indicates the steps of the form: -->
+					 <div style="text-align:center;margin-top:40px;">
+						<span class="step"></span>
+						<span class="step"></span>
+						<span class="step"></span>
+						<span class="step"></span>
+					 </div>
+				</div></form></main>
+			<div class="columns">
+				<div class="container1">
+					<div class="container-ring beginAnim">
+						<svg class="ringMain" viewBox="0 0 100 100" type="image/svg+xml" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="50" cy="50" r="4" class="c1"></circle>
+						<circle cx="50" cy="50" r="5" class="c2"></circle>
+						<circle cx="50" cy="50" r="7" class="c3 c3-1-red"></circle>
+						<circle cx="50" cy="50" r="8.5" class="c3 c3-2"></circle>
+						<circle cx="50" cy="50" r="10" class="c3 c3-3"></circle>
+						<circle cx="50" cy="50" r="27" class="c4"></circle>
+						<circle cx="50" cy="50" r="28" class="c5"></circle>
+						<circle cx="50" cy="50" r="29" class="c6"></circle>
+						<circle cx="50" cy="50" r="43" class="c7"></circle>
+						<circle cx="50" cy="50" r="45" class="c8"></circle>
+						<circle cx="50" cy="50" r="46" class="c9"></circle>
+						<circle cx="50" cy="50" r="48" class="c10"></circle>
+						<circle cx="50" cy="50" r="49" class="c11"></circle>
+					</svg>
+					<div class="cpu">
+						<p>XspAce</p>
+						<p>18%</p>
+					</div>
+					<div class="rotate-skew">
+						<div class="skew-square">
+							<div class="square-1"></div>
+							<div class="square-2"></div>
+							<div class="square-3"></div>
+							<div class="square-4"></div>
+							<div class="square-5"></div>
+							<div class="square-6"></div>
+							<div class="square-7"></div>
+							<div class="square-8"></div>
+							<div class="square-9"></div>
+							<div class="square-10"></div>
+							<div class="square-11"></div>
+							<div class="square-12"></div>
+							<div class="square-13"></div>
+							<div class="square-14"></div>
+							<div class="square-15"></div>
+							<div class="square-16"></div>
+							<div class="square-17"></div>
+							<div class="square-18"></div>
+						</div>
+					</div>
+
+					<div class="rectangle">
+						<div class="rectangle-2"></div>
+						<div class="rectangle-3"></div>
+						<div class="rectangle-4"></div>
+						<div class="rectangle-5"></div>
+						<div class="rectangle-6"></div>
+						<div class="rectangle-7"></div>
+						<div class="rectangle-8"></div>
+						<div class="rectangle-9"></div>
+						<div class="rectangle-10"></div>
+						<div class="rectangle-11"></div>
+						<div class="rectangle-12"></div>
+						<div class="rectangle-13"></div>
+						<div class="rectangle-14"></div>
+						<div class="rectangle-15"></div>
+						<div class="rectangle-16"></div>
+						<div class="rectangle-17"></div>
+						<div class="rectangle-18"></div>
+						<div class="rectangle-19"></div>
+						<div class="rectangle-20"></div>
+						<div class="rectangle-21"></div>
+						<div class="rectangle-22"></div>
+						<div class="rectangle-23"></div>
+						<div class="rectangle-24"></div>
+					</div>
+					<div class="symbol">
+						<div class="symbol-1"><p>X</p></div>
+						<div class="symbol-2"><p>s</p></div>
+						<div class="symbol-3"><p>p</p></div>
+						<div class="symbol-4"><p>a</p></div>
+						<div class="symbol-5"><p>c</p></div>
+						<div class="symbol-6"><p>e</p></div>
+					</div></div></div></div></div>
+					
+	<script  src="./includes/js/jquery-3.5.1.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js'></script>
+	<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js'></script>
+	
+	<script  src="./includes/js/scriptindex.js"></script>
+	<script  src="./includes/js/script.js"></script>
+
+
+</body>
+</html>
+
+
+
