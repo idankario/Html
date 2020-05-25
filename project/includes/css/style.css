@@ -1,0 +1,354 @@
+/*-----------------------------*/
+/*inits*/
+/*-----------------------------*/
+*{
+    margin: 0px;
+    padding: 0px;	
+}
+
+main,footer, nav, section,aside, div,#logo{
+    display : block;
+}
+
+a{
+	text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+nav li{
+    display: inline-block;
+	margin-left: 50px;
+
+}
+section div{
+	max-width:320;
+}
+header,wrapper,footer{
+	width:100%;
+}
+
+input{
+	margin-right:5%;
+	max-width:200px;
+}
+
+body{
+	background-color: #ebebeb ;
+}
+a{
+	color:#000000;
+}
+/*-----------------------------*/
+/* Header area */
+/*-----------------------------*/
+header{
+	display: flex;
+	justify-content: center;
+}
+
+#logo{
+	height: 120px;
+	width:55%;
+	background:url(../../images/Logo.png) no-repeat center;
+}
+
+.wrapper{
+	width:100%;
+	display: grid;
+	grid-template-rows: 100px 450px  320px 1500px ;
+}
+.coverImg
+{  
+	opacity:0.6;
+	background:url(../../images/cover.jpg) no-repeat ;
+	background-size: 100% 100%;
+	
+}
+
+.mainTitle{
+	display: flex;
+
+	align-items: center;
+	height: 120px;
+}
+
+h1,h2{
+	font-family: 'Cormorant Garamond', serif;
+}
+
+h1{
+
+	font-size:140px;
+}
+
+h2{
+	text-align:center;
+	background-color: #ebebeb ;
+	position: relative;
+	top:-90px;
+	padding: 0px 100px;
+}
+
+.btn{
+	border-radius:10px;
+	margin:0 40px;
+	padding:10px 40px;
+}
+
+.btn + div {
+	float:right;
+	width:74px;
+	background:url(../../images/player.png) no-repeat ;
+}
+
+section{
+	height:1200px;	font-size:20px;
+}
+
+.filed {
+	
+}
+
+.Information{
+	background:url(../../images/Atmosphere.png) no-repeat ;
+	font-size:20px;
+	background-size: 100% 100%;
+	height:1000px;
+}
+.Information .container1
+{
+	width:600px;
+	text-align: center;
+	position:relative;
+	margin-left:20%;
+}
+
+/*-----------------------------*/
+/* Footer area */
+/*-----------------------------*/
+
+footer{
+	clear:both;
+	height: 66px;
+	background: #0074D9;
+}
+
+footer a img{
+	margin:20px;
+}
+
+/*sec page*/
+.part{
+	background-color: white;
+	margin: 20px;
+	width: 1000px;
+	padding: 10px;
+}
+
+hr{
+	border-top: 1px dashed black;
+}
+ 
+.tools{
+	opacity: 50%;
+	margin-top: 10px;
+
+}
+
+.tools hr, aside hr{
+	border-top: 1px solid black;
+	opacity: 50%;
+}
+.tools a{
+	margin-left: 50px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.part img{
+	margin: 20px 0px 0px 50px;
+	border-radius: 50%;
+}
+
+.part section{
+	
+	display: flex;
+	height: 120px;
+}
+
+.data{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin: 30px;
+	width: 950px;
+}
+
+.data span{
+	margin: 10px 40px 0px 0px;
+	font-size: 16px;
+	width: 150px;
+}
+
+aside{
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	height: 300px;
+	background-color: white;
+	padding: 10px;
+	position: absolute;
+	top:240px;
+	left:1050px;
+}
+
+
+
+aside ul li{
+	margin-top: 10px;
+}
+
+
+/* make the button flat*/
+ 
+aside button{
+	background-color: white;
+	-webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+    outline: none;
+    border: none;
+	
+}
+aside button:active { 
+	border-style: outset;
+	border: none;
+}
+
+
+.amount{
+	margin-left: 1px;
+}
+
+
+
+.nav img{
+	border-radius: 50%;
+}
+
+
+#hamburger{
+	display: none;
+
+}
+
+
+/*responsive*/
+
+#hamburger{
+	display: none;
+}
+.wrapper{
+	width:100%;
+	display: grid;
+	grid-template-rows:  450px  320px 2500px ;
+}
+
+@media (min-width: 720px) and (max-width: 1024px) { 
+	.responsive{display: none;}
+	}
+@media  (max-width: 720px) {
+	
+	.nav ul, .responsive{
+		display: none;
+	}	
+	
+	form div{
+		display: block;
+	}
+
+	form label{
+		margin-left: 10px;
+	}
+
+	#hamburger{
+		display: flex;
+	
+	}
+
+	#hamburger ul{
+		display: flex;
+		float: left;
+		text-align: left;
+	}
+
+	.soccerimg{
+		display: none;
+	}
+	input{max-width:200px;}
+	
+	.tools{
+
+		margin-top: 0px;
+		height: 130px;
+		align-items: flex-start;
+	}
+	.tools a{
+		margin-left: 20px;
+	
+	}
+	.part{
+		margin: 10px;
+		width: 500px;
+		height: 900px;
+	}
+
+	#secundegame{
+		margin-top: 150px;
+	}
+	
+	.data{
+		display: flex;
+		flex-direction: row;
+	}
+
+	.part img{
+		display: none;
+	}
+	aside{
+		display: none;
+	}
+	
+	.coverImg{
+		display: none;
+	}
+
+	.Information{
+		display: none;
+	}
+
+	#filed #fields{
+		
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		
+	}
+
+	#filed {
+		width: 500px;
+	}
+
+	h1{
+display: none;
+	}
+
+	h2{
+		width:400px;
+	}
+	#filed{position:absolute; top:350px;}
+}

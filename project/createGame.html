@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Goal Field</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">	<script src="https://kit.fontawesome.com/88a0e48742.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.standalone.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.js"></script>
+	<link rel="stylesheet" href="includes/css/style.css">
+</head>
+<body>
+	<header><a href="#" id="logo"></a></header>
+	
+  	<!--Navbar-->
+<nav id="hamburger"  class="navbar navbar-light purple lighten-4 mb-4">
+
+
+	
+  
+	<!-- Collapse button -->
+	<button class="navbar-toggler toggler-example purple darken-3" type="button" data-toggle="collapse"
+	  data-target="#navbarSupportedContent41" aria-controls="navbarSupportedContent41" aria-expanded="false"
+	  aria-label="Toggle navigation"><span class="white-text"><i class="fas fa-bars fa-1x"></i></span></button>
+  
+	<!-- Collapsible content -->
+	<div class="collapse navbar-collapse" id="navbarSupportedContent41">
+  
+	  <!-- Links -->
+	  <ul class="navbar-nav mr-auto">
+		<li class="nav-item">
+			<a class="nav-link" href="http://shenkar.html5-book.co.il/2019-2020/web1/dev_209/myGame.html">My games</a>
+		  </li>
+		<li class="nav-item ">
+		 	 <a class="nav-link" href="http://shenkar.html5-book.co.il/2019-2020/web1/dev_209/index.html">
+			  Home 
+			</a>
+		</li>
+		<li class="nav-item active">
+		  <a class="nav-link" href="#">Book a field
+			<span class="sr-only">(current)</span>
+		  </a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="#">Events</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#">Group</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#">Contect</a>
+		  </li>
+	  </ul>
+	  <!-- Links -->
+  
+	</div>
+	<!-- Collapsible content -->
+  
+  </nav>
+  <!--/.Navbar-->
+
+	<div class=" container-fluid">
+		<nav class="nav justify-content-center">
+			<ul class="nav">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" >
+					<img src="./images/pro_pic.jpg"  alt="Img Profile" title="ImgvProfile"></a>
+					<div class="dropdown-menu"><a class="dropdown-item " href="http://shenkar.html5-book.co.il/2019-2020/web1/dev_209/myGame.html">My games</a></div>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link " href="http://shenkar.html5-book.co.il/2019-2020/web1/dev_209/index.html"><i class="fas fa-home"></i>Home</a>
+				</li>
+				<li class="nav-item dropdown">
+				  <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#">
+					<i class="fas fa-cart-plus"></i>Book a field</a>
+				  <div class="dropdown-menu">
+					<a class="dropdown-item " href="#">Join an existing game</a>
+					<a class="dropdown-item" href="#">Creat new game</a>
+				  </div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="#"><i class="far fa-calendar-check "></i>events</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="#"><i class="fas fa-users"></i>Group</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="#"><i class="far fa-address-book"></i>Contect</a>
+				</li>
+			</ul>      
+		</nav>
+	
+	<div class="container-fluid  font-weight-bold" >
+	
+		<img  class="float-right m-5 responsive" src="./images/soccre.png" alt="soccer" title="soccer">
+
+		<form class="text-center w-50 ml-5 "   action="#!">
+
+			<p class="h4 mb-4">Creat a game</p>
+			<hr><br>
+			
+			<div class="form-row mb-4">
+				<i class="fas fa-user-friends mt-2"></i><input type="text" id="defaultRegisterFormFirstName" class="form-control w-25 p-3" placeholder="Group name">	
+				<div class="checkbox-inline"><label><input type="checkbox" value="">  <i class="fas fa-lock"> Private</i></label></div	>
+				<div class="checkbox-inline"><label><input type="checkbox" value="">  <i class="fas fa-futbol"> Fixed</i></label></div	>
+			</div>
+			
+			<div class="form-row mb-4">
+				
+					<div id="sandbox-container">
+						<div class="input-group date"><i class="  mt-2 far fa-calendar-alt"></i><input type="text" class="form-control"><span class="input-group-addon"></span></div>
+					</div>
+					
+				<label class="mt-2"> From : </label><input type="time"  class="ml-3" id="appt" name="appt" value="08:00"> 
+				
+				<label class="mt-2"> Until :  </label> <input type="time"  class="ml-3" id="appt" name="appt" value="09:00">
+				
+			</div>
+			<div class="form-row mb-4">
+				<input type="number" placeholder="Number of players" id="tentacles" name="tentacles" min=1>
+				<select class="custom-select mr-sm-2 w-25" id="inlineFormCustomSelect">
+					<option>Tel aviv</option>
+					<option>Natania</option>
+					<option>Haifa</option>
+					<option>Jerusalem</option>
+				</select>
+			</div>
+			<hr><br>
+	
+			<div class="form-row mb-4">
+					<!-- Password -->
+				<input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password least 8 char & 1 digit" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+			
+			</div>	
+			<div class="form-row mb-4">
+				
+			
+					<input type="email" id="defaultRegisterFormEmail" class="form-control " placeholder="E-mail">
+				
+			<!-- E-mail -->
+				
+
+			</div>	
+			<div class="form-row mb-4">
+			<!-- Phone number -->
+				<input type="text" id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+			</div>	
+			<div class="form-row mb-4">
+				<div class="form-group">
+				
+					<textarea class="form-control"placeholder="Write somthing about the group" rows="5" cols="50" id="comment"></textarea>
+				</div>
+			</div>
+		
+			<div class="form-row mb-4">
+				<button id="submit_btn" class="btn btn-info my-4 btn-block" type="submit">Create a new game</button>
+			</div>	
+
+
+			
+			<hr>
+
+			<!-- Terms of service -->
+			<p>By clicking <em>"Sign up"</em> you agree to our <a href="#" class="text-primary">terms of service</a>
+
+
+		</form>
+		<!-- Default form register -->
+		
+	</div>
+
+
+	<footer >
+		<a href="#"><img src="./images/icon/Twitter.png" alt="twitter"></a>
+		<a href="#"><img src="./images/icon/Linkedin.png" alt="linkedin"></a>
+		<a href="#"><img src="./images/icon/Google.png" alt="google"></a>
+		<a href="#"><img src="./images/icon/Facebook.png" alt="facebook"></a>	
+	</footer>
+
+
+	<script src="./includes/js/script.js"></script>
+	<script src="./includes/js/jquery-3.5.1.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body></html>
