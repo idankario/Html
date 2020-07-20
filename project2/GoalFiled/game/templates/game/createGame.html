@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Goal Field</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.standalone.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">	
+    <script src="https://kit.fontawesome.com/88a0e48742.js" crossorigin="anonymous"></script>
+    {%load static%}
+	<link rel="stylesheet" href="{% static 'game/css/style.css' %}">	
+</head>
+<body>
+	<div class="d-flex flex-column">
+		<header  class="d-flex justify-content-center"><a href="#" id="logo"></a></header>
+		<nav class="navbar navbar-expand-sm"  id="creatgamepage">
+
+		</nav>
+
+		<div class="container-fluid mt-2 font-weight-bold" >
+			<form  action="#" id="creatgameform">
+				<h1 class="h2">Creat a game</h1>
+				<div class="block_1 hline-bottom"></div>
+				<div>
+					<i class="fas fa-user-friends ml-3">
+						<input type="text" name="Group name" id="Group name"  placeholder="Group name">	
+					</i>
+					<div class="d-inline-flex" >
+						<label><input type="checkbox" value="Private"><i class="fas fa-lock"> Private</i></label>
+						<label><input type="checkbox" value="Fixed"><i class="fas fa-futbol"> Fixed</i></label>
+					</div>
+					<div>
+						<i class=" far fa-calendar-alt mt-2"><input type="text" class="date" id="date" /></i>
+					</div>
+					<div>
+						<label id="startime">start time:
+							<input type="time" id="appt" name="appt" min="06:00" max=22:00 required>
+						</label>
+						<label id="endtime">end time
+							<input type="time" id="appt" name="appt" min="07:00" max=22:00 required>
+						</label>
+					</div>
+					<div >
+						<input type="number" placeholder="Num players" id="tentacles" name="tentacles" min="3" >
+						<select class="custom-select w-25" id="fields">
+							<!--dinamic in js-->
+						</select>
+					</div>
+					
+					<div class="block_1 hline-bottom"></div>
+					<br>
+				</div>
+				
+				<div >
+					<!-- Password -->
+					<input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password least 8 char & 1 digit" aria-describedby="pw-hint">
+			
+					<!-- E-mail -->
+					<input type="email" id="defaultRegisterFormEmail" class="form-control" placeholder="E-mail">
+			
+					<!-- Phone number -->
+					<input type="text" id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number" aria-describedby="info">
+
+					<textarea class="form-control" placeholder="Write somthing about the group" rows="5" cols="50" id="comment"></textarea>
+				</div>
+				
+				<!-- Terms of service -->
+				
+				<div >
+				<p>By clicking <em>"Sign up"</em> you agree to our <a href="#" class="text-primary">terms of service</a>
+					<button id="submit_btn" class="btn btn-info btn-block" type="submit" onclick="checkData()">Create a new game</button>
+				</div>
+				
+				
+			</form>
+			
+			<!-- Default form register -->
+			
+		</div>
+		</div>
+
+	<footer >
+		<a href="#"><img src="{% static 'game/images/icon/Twitter.png'%}" alt="twitter" title="twitter"></a>
+		<a href="#"><img src="{% static 'game/images/icon/Google.png'%}" alt="google" title="google"></a>
+		<a href="#"><img src="{% static 'game/images/icon/Facebook.png'%}" alt="facebook" title="facebook"></a>	
+	</footer>
+	
+	<script src="{% static 'game/js/jquery-3.5.1.js' %}"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="{% static 'game/js/bootstrap-datepicker.js' %}"></script>
+	<script src="https://www.jonthornton.com/jquery-timepicker/jquery.timepicker.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script  src="{% static 'game/js/script.js' %}"></script>
+</body></html>

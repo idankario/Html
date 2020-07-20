@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+ul,li{
+    list-style-type: none;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+	position:absolute;
+	top:0px;
+	background-color: green;
+	color: white;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.back, .card:hover{
+  transform: rotateY(180deg);
+}
+
+
+</style>
+</head>
+<body>
+
+
+
+  <li class="card">
+    <img src="filed.jpg" alt="Avatar ">
+      <div class="back">
+      <h3>Coral is the best</h3>  
+      <p>bla bla</p> 
+      <p>We love gays</p>
+    </div>
+  </li>
+
+
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+[
+    {
+      "fieldName": "The diamond",
+      "openingHours": "10:00-20:00",
+      "phoneNumber": "09-8810884",
+      "address": "Netanya Municipal Stadium, Netanya"
+
+    },
+    {
+        "fieldName": "Bloomfield",
+        "openingHours": "08:00-20:00",
+        "phoneNumber": "03-0003884",
+        "address": "The rest of Israel, Tel Aviv-Jaffa"
+    },
+    {
+        "fieldName": "Teddy",
+        "openingHours": "08:00-22:00",
+        "phoneNumber": "02-678-8320",
+        "address": "Teddy Stadium, Jerusalem"
+    },
+    {
+        "fieldName": "Sammy Ofer",
+        "openingHours": "06:00-20:00",
+        "phoneNumber": "04-300-2301",
+        "address": "Pinchas and Avraham Rotenberg 2, Haifa"
+    }
+]
